@@ -1,0 +1,21 @@
+// Home Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <% include('components/header.ejs') %>
+    <h1>Welcome to the Home Page</h1>
+    <label>List of Products</label>
+
+    <ul>
+//Dynamic template rendering
+        <% products.forEach(product => { %>
+            <li><%= product.id %> - $<%= product.price %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
